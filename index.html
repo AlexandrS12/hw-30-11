@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        //t1
+        // function func1(a, b) {
+        //     if (a < b) {
+        //         return -1;
+        //     }
+        //     else if (a > b) {
+        //         return 1;
+        //     }
+        //     else {
+        //         return 0;
+        //     }
+        // }
+
+        // let rez = func1(10, 10);
+        // if (rez == -1) {
+        //     alert("a < b");
+        // }
+        // else if (rez == 1) {
+        //     alert("a > b");
+        // }
+        // else if (rez == 0) {
+        //     alert("a == b");
+        // }
+
+        //t 2
+        // let number = parseInt(prompt("Enter n: ", ""));
+        // alert("Factorial : " + factorial(number));
+
+        // function factorial(n)
+        // {
+        //     if (n == 0)
+        //         return 1;
+        //     else
+        //         return n * factorial(n - 1); 
+        // }
+
+        // //t 3
+        // let number1 = prompt("Enter1 -fst n: ", "");
+        // let number2 = prompt("Enter 2-nd n: ", "");
+        // let number3 = prompt("Enter 3-rd n: ", "");
+
+        // function func(number1, number2, number3)
+        // {
+        //     return number1 + number2 + number3;
+        // }
+
+        // let rez = func(number1, number2, number3);  
+
+        // document.write(rez);  
+
+       //t 4
+        // let a = prompt("Width: ", "");
+        // let b = prompt("Height: ", "");
+
+        // function func(a, b) {
+        //     if (b === undefined || b == 0) {
+        //         let s1 = a * a;
+        //         document.write("S kvadrata: " + s1);
+        //     } else {
+        //         let s2 = a * b;
+        //         document.write("S prymoygolnika: " + s2);
+        //     }
+        // }
+
+        // a = parseFloat(a);
+        // b = parseFloat(b);
+
+        // func(a, b);
+
+        //t5
+        function func(number) {
+            let count = 0;
+            for (let i = 1; i < number; i++) {
+                if (number % i === 0) {
+                    count += i;
+                }
+            }
+            return count === number;
+        }
+
+        let a = prompt("Enter n: ", "");
+        let numericValue = parseInt(a);
+
+        if (func(numericValue)) {
+            document.write(numericValue + " - perfect number");
+        } else {
+            document.write(a + " - no perfect number");
+        }
+
+
+        //t6
+        // let start = parseInt(prompt("Enter start n: ", ""));
+        // let end = parseInt(prompt("Enter last n: ", ""));   
+
+        // function func(start, end) {
+        //     document.write("perfect number from range: ");
+        //     for (let i = start; i < end; i++) 
+        //     {
+        //         function func(number) {
+        //             let count = 0;
+        //             for (let i = 1; i < number; i++) {
+        //                 if (number % i === 0) {
+        //                     count += i;
+        //                 }
+        //             }
+        //             return count === number;
+        //         }
+
+        //         if (func(i)) {
+        //             document.write(i + ", ");
+        //         } 
+
+        //     }
+        // }
+
+        // func(start, end);   
+
+        //t7
+            //  below   --->
+
+        //t8
+        function times(hours, minutes, seconds) {
+            return hours * 3600 + minutes * 60 + seconds;
+        }
+
+        let hours = prompt("Hours: ");
+        let minutes = prompt("Minutes: ");
+        let seconds = prompt("Seconds: ");
+
+        hours = parseInt(hours, 10);
+        minutes = parseInt(minutes, 10);
+        seconds = parseInt(seconds, 10);
+
+        let Seconds = times(hours, minutes, seconds);
+        document.write(Seconds - " Seconds");
+
+        //t9
+        function TimeS(seconds) {
+            let hours = Math.floor(seconds / 3600);
+            let minutes = Math.floor((seconds % 3600) / 60);
+            let Seconds = seconds % 60;
+
+            document.write(hours + ":" + minutes + ":" + Seconds);
+        }
+
+        let time = prompt("Seconds: ");
+        TimeS(time);
+
+    </script>
+</body>
+</html>
